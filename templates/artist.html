@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>{{ artist.name|capfirst }}</h2>
+										</header>
+										<p>{{ artist.bio }}</p>
+										<ul class="actions">
+											<li><a href="/" class="button">Go back to Homepage</a></li>
+										</ul>
+									</div>
+									<span class="image"><img src="{{ artist.avatar.url }}" width="150" height="150" alt="" /></span>
+								</div>
+							</section>
+					<nav id="nav">
+						<ul>
+							<li><a href="#albums">Albums</a></li>
+							<li><a href="#songs">Songs</a></li>
+							<li><a href="#contact">Contact {{ artist.name }}</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<section id="albums" class="main special">
+									<header class="major">
+										<h2>Albums</h2>
+									</header>
+									<ul class="features">
+										{% for album in albums %}
+										<li>
+										<span class="image"><img src="{{ album.art.url }}" alt="" width="250" height="250" /></span>
+											<!-- <span class="icon major style1 fa-code"></span> -->
+											<h3>{{ album.name }}</h3>
+											<a href="{% url 'artist' artist.slug %}" class="button small fit"> Go to artist</a>										
+										</li>
+										{% endfor %}
+									</ul>
+									<footer class="major ">
+			                            {% if albums.has_previous %}
+			                            <a class="button special small" href="?albums={{ albums.previous_page_number }}#albums">Previous</a>
+			                            {% endif %}
+			                            {% if albums.has_next %}
+			                            <a class="button special small" href="?albums={{ albums.next_page_number }}#albums">Next</a>
+			                            {% endif %}
+									</footer>	
+								</section>
+								<section id="songs" class="main special">
+									<header class="major">
+										<h2>Songs</h2>
+									</header>
+									<ul class="features">
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+													<tr>
+														<th>Artist</th>
+														<th>Track</th>
+														<th>Price</th>
+													</tr>
+												</thead>
+												<tbody>
+												{% for song in songs %}
+													<tr>
+														<td>{{ song.title }}</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+												{% endfor %}
+												</tbody>
+											</table>
+									<footer class="major paginator">
+			                            {% if songs.has_previous %}
+			                            <a class="button special small" href="?songs={{ songs.previous_page_number }}#songs">Previous</a>
+			                            {% endif %}
+			                            {% if songs.has_next %}
+			                            <a class="button special small" href="?songs={{ songs.next_page_number }}#songs">Next</a>
+			                            {% endif %}
+									</footer>												
+										</div>
+										
+
+						
+									</ul>
+
+								</section>
+							</section>
+
+					</div>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>Aliquam sed mauris</h2>
+							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+							<ul class="actions">
+								<li><a href="generic.html" class="button">Learn More</a></li>
+							</ul>
+						</section>
+						<section>
+							<h2>Etiam feugiat</h2>
+							<dl class="alt">
+								<dt>Address</dt>
+								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+								<dt>Phone</dt>
+								<dd>(000) 000-0000 x 0000</dd>
+								<dt>Email</dt>
+								<dd><a href="#">information@untitled.tld</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="#" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+{% endblock %}
