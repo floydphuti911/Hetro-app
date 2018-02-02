@@ -25,6 +25,8 @@ SECRET_KEY = '0#4ei7z4_%ef^x(fn2bv)9=n0n*@gb*5u-)-ots*%b&rehyf1-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+DJANGO_ENV = os.environ.get('DJANGO_ENV')
+
 ALLOWED_HOSTS = ['*']
 
 
@@ -81,6 +83,11 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+if DJANGO_ENV == "PRODUCTION":
+    import dj_database_url
+    DATABASES = {'default': dj_database_url.config()}
+
 
 
 # Password validation
