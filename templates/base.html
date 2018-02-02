@@ -37,18 +37,23 @@
       <script src="/static/js/classie.js"></script>
       <script src="/static/js/uisearch.js"></script>  
       
+      <!--audio-->
+      <link rel="stylesheet" type="text/css" media="all" href="{% static '/css/audio.css' %}">
+      <script type="text/javascript" src="{% static '/js/mediaelement-and-player.min.js' %}"></script>
+      <!---->
+
 
       <script src="/static/js/responsiveslides.min.js"></script>
 
       <!-- script for play-list -->
       <link href="/static/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css">
-      <script type="text/javascript" src="/static/js/jquery.jplayer.min.js"></script>
-      <script type="text/javascript" src="/static/js/jplayer.playlist.min.js"></script>
-
       <script type="text/javascript" src="/static/js/jquery.flexisel.js"></script>    
 
-      {% block custom_scripts %} {% endblock %}
+      {% block custom_scripts %} 
+        
+      {% endblock %}
 
       <script src="{% static 'js/scripts.js' %}"></script>   
+      <script src="{% static 'js/main.js' %}"></script>   
 </body>
 </html>

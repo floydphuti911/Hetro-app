@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Hetro_app',
+    'tastypie',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,5 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
+
+TASTYPIE_ALLOW_MISSING_SLASH = True

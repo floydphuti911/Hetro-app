@@ -28,8 +28,8 @@ class ArtistView(View):
 		artist = get_object_or_404(Artist,slug=kwargs.get('slug'))
 		context = {'artist': artist}
 
-		albums = artist.albums.filter()
-		paginator = Paginator(albums, 3) # Show 25 contacts per page
+		albums = artist.albums.all()
+		paginator = Paginator(albums, 3) # Show 3 contacts per page
 		page = request.GET.get('albums')
 		try:
 			albums = paginator.page(page)
