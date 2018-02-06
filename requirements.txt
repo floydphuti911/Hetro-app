@@ -73,7 +73,6 @@ request==0.0.2
 requests==2.18.4
 rsa==3.4.2
 s3transfer==0.1.11
-setupfiles==0.0.50
 six==1.10.0
 South==1.0.2
 sqlparse==0.2.3
