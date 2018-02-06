@@ -4,22 +4,22 @@
 <head>
 
 <!-- Bootstrap Core CSS -->
-<link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="{% static '/css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
 
 
 <!-- Graph CSS -->
-<link href="/static/css/font-awesome.css" rel="stylesheet"> 
+<link href="{% static '/css/font-awesome.css' %}" rel="stylesheet"> 
 
 <!-- lined-icons -->
-<link rel="stylesheet" href="/static/css/icon-font.css" type='text/css' />
+<link rel="stylesheet" href="{% static '/css/icon-font.css' %}" type='text/css' />
 
 <!-- playlist -->
-<link rel="stylesheet" type="text/css" media="all" href="{% static '/css/mediaelementplayer.css' %}"> 
-<link rel="stylesheet" type="text/css" media="all" href="{% static '/css/audio.css' %}"> 
-<link rel="stylesheet" href="/static/playlist/playlist.css" type='text/css' />
+<link rel="stylesheet" type='text/css' media="all" href="{% static '/css/mediaelementplayer.css' %}"> 
+<link rel="stylesheet" type='text/css' media="all" href="{% static '/css/audio.css' %}"> 
+<link rel="stylesheet" href="{% static '/playlist/playlist.css' %}"  type='text/css' />
 
 <!-- Custom CSS -->
-<link href="/static/css/style.css" rel='stylesheet' type='text/css' />
+<link href="{% static '/css/style.css' %}" rel='stylesheet' type='text/css' />
 
 
 
@@ -38,8 +38,8 @@
       <script src="{% static 'js/jquery.nicescroll.js' %}"></script>
 
       <!-- search-scripts -->
-      <script src="/static/js/classie.js"></script>
-      <script src="/static/js/uisearch.js"></script>  
+      <script src="{% static '/js/classie.js' %}"></script>
+      <script src="{% static '/js/uisearch.js' %}"></script>  
       
       <!--audio-->
       <script type="text/javascript" src="{% static '/js/mediaelement-and-player.min.js' %}"></script>
@@ -47,11 +47,11 @@
       <!---->
 
 
-      <script src="/static/js/responsiveslides.min.js"></script>
+      <script src="{% static '/js/responsiveslides.min.js' %}"></script>
 
       <!-- script for play-list -->
-      <link href="/static/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css">
-      <script type="text/javascript" src="/static/js/jquery.flexisel.js"></script>    
+      <link href="{% static '/css/jplayer.blue.monday.min.css' %}" rel="stylesheet" type="text/css">
+      <script type="text/javascript" src="{% static '/js/jquery.flexisel.js' %}"></script>    
 
       {% block custom_scripts %} 
         

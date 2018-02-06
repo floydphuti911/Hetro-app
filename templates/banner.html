@@ -1,3 +1,4 @@
+		      {% load static %}
 		      <!--banner-section-->
 							<div class="banner-section">
 								<div class="banner">
@@ -5,7 +6,7 @@
 										<ul class="rslides callbacks callbacks1" id="slider4">
 											   	<li>
 														<div class="banner-img">
-															 <img src="/static/images/11.jpg" class="img-responsive" alt="">
+															 <img src="{% static '/images/11.jpg' %}" class="img-responsive" alt="">
 														 </div>
 														<div class="banner-info">
 														              <a class="trend" href="single.html">Hello</a>
@@ -16,7 +17,7 @@
 												</li>
 												<li>
 													<div class="banner-img">
-															 <img src="/static/images/22.jpg" class="img-responsive" alt="">
+															 <img src="{% static '/images/22.jpg' %}" class="img-responsive" alt="">
 														 </div>
 														<div class="banner-info">
 																	  <a class="trend" href="single.html">TRENDING</a>
@@ -28,7 +29,7 @@
 												</li>
 												<li>
 												 <div class="banner-img">
-															 <img src="/static/images/33.jpg" class="img-responsive" alt="">
+															 <img src="{% static '/images/33.jpg' %}" class="img-responsive" alt="">
 														 </div>
 														<div class="banner-info"> 
 														             <a class="trend" href="single.html">TRENDING</a>
@@ -41,7 +42,7 @@
 											</ul>
 										</div>
 										<!--banner-->
-									<script src="/static/js/responsiveslides.min.js"></script>
+									<script src="{% static '/js/responsiveslides.min.js' %}"></script>
 								 <script>
 									// You can also use "$(window).load(function() {"
 									$(function () {
