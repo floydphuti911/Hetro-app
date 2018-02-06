@@ -20,10 +20,11 @@
 
 											 <!---->
 											  <div class="col-md-4 player">
-													<div class="audio-player">
-														<audio id="audio-player"  controls="controls">
-														<source src="{% static '/media/INVISIBLE.mp3' %}" type="audio/mpeg"></source>
-																<source src="{% static '/media/Georgia.mp3' %}" type="audio/mpeg"></source></audio>
+													<div class="media-wrapper">
+														<audio id="audio-player"  controls preload="none">
+															<source src="{% static '/media/INVISIBLE.mp3' %}" type="audio/mp3">
+															<source src="{% static '/media/Georgia.mp3' %}" type="audio/mp3">
+														</audio>
 														</div>
 												<!---->
 

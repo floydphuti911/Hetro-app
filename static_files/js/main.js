@@ -6,7 +6,7 @@ new UISearch( document.getElementById( 'sb-search' ) );
 	$(function(){
 	  $('#audio-player').mediaelementplayer({
 		alwaysShowControls: true,
-		features: ['playpause','progress','volume'],
+		features: ['prevtrack', 'playpause', 'nexttrack', 'current', 'progress', 'duration', 'volume', 'playlist', 'shuffle', 'loop'],
 		audioVolume: 'horizontal',
 		iPadUseNativeControls: true,
 		iPhoneUseNativeControls: true,

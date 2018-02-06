@@ -14,8 +14,9 @@
 <link rel="stylesheet" href="{% static '/css/icon-font.css' %}" type='text/css' />
 
 <!-- playlist -->
-<link rel="stylesheet" type='text/css' media="all" href="{% static '/css/mediaelementplayer.css' %}"> 
-<link rel="stylesheet" type='text/css' media="all" href="{% static '/css/audio.css' %}"> 
+<!-- <link rel="stylesheet" type='text/css' media="all" href="{% static '/css/mediaelementplayer.css' %}">  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
 <link rel="stylesheet" href="{% static '/playlist/playlist.css' %}"  type='text/css' />
 
 <!-- Custom CSS -->
@@ -42,7 +43,8 @@
       <script src="{% static '/js/uisearch.js' %}"></script>  
       
       <!--audio-->
-      <script type="text/javascript" src="{% static '/js/mediaelement-and-player.min.js' %}"></script>
+      <!-- <script type="text/javascript" src="{% static '/js/mediaelement-and-player.min.js' %}"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js"></script>
       <script type="text/javascript" src="{% static '/playlist/playlist.js' %}"></script>
       <!---->
 
@@ -50,14 +52,13 @@
       <script src="{% static '/js/responsiveslides.min.js' %}"></script>
 
       <!-- script for play-list -->
-      <link href="{% static '/css/jplayer.blue.monday.min.css' %}" rel="stylesheet" type="text/css">
       <script type="text/javascript" src="{% static '/js/jquery.flexisel.js' %}"></script>    
 
       {% block custom_scripts %} 
         
       {% endblock %}
 
-      <script src="{% static 'js/scripts.js' %}"></script>   
+     <!--  <script src="{% static 'js/scripts.js' %}"></script>    -->
       <script src="{% static 'js/main.js' %}"></script>   
 </body>
 </html>
