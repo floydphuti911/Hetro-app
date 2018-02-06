@@ -32,8 +32,7 @@ v1_api.register(FeaturedSongsResource())
 
 urlpatterns = [
 url(r'^admin/', admin.site.urls),
-url(r'^static/(?P<path>.*)$', static.serve, {'document_root': settings.STATIC_ROOT}),
 url(r'^artist/(?P<slug>.*)$', ArtistView.as_view(), name="artist"),
 url(r'^api/', include(v1_api.urls)),
 url(r'^$', HomeView.as_view(), name="homepage"),
-]#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
