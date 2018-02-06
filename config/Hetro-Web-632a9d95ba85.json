@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hetro-web",
+  "private_key_id": "632a9d95ba85ab52ad9eb5fb6cf3eb95b307bf85",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCx4OJa1J2nNoYa\nnTJr+hnmlDwXSG4m2TV2Hxv8vbMDBNlWOJYBnWrWdkEEFxlWSDk6b2tS6KbjSmXK\n+d/QMTgXSCp4N5j6ZO7TpZLA3Ew+fN4W9e0+qDJ0B+XhoOLHdV+QcYcAIZJDFoHA\n7ySTVdWC47g9LklZ0X6Q6Pkg/w1R9C5T88Gh/KxUxv3I52MixcdrFDpv8uMKbZF0\n+dGVYTuaLjlFMqXuatRqplRM7Uy20qWQxdLDluC4UuitMaV7xSqBkvNr6oLCPUku\n80ixdbzLTduStsgsf1Qdjr+JfjARbKT0jm8tAg9eBGQMyCkGlm4ucWc8Y0lXd9vQ\n6IsVrK5hAgMBAAECggEAGt5w4q6GJ+l1BVUkdin/upQ+pXez59tcl3yoght3jGex\nmrQOeKz6I+4V8RO6KI3dUyXcbNgmyWOGD8yB0dV1dxLYE3O2gHA5oS+8BLTiMXg0\nJfy8+v92K4+72kKurtlcd5mmfk8T5F1keSvGdxj6mPxj6p3wx4f9Gc+PPjw4m13J\naR+fradXKQsPHWnr5eLlaldYYQyB2EbVEw5lH9XE0RV60vdaPtTQG/OayWjcwPzz\n3fVhtARQCLo1kS5sC5tP+v7wQ6e2P3pDW7sjKBk+ZRN58X2sH7jN8k1+Zuni4CPg\n8tHKAO5/L5o4fLddZmU54UIu/YqlJBvn1mcSSy8tTwKBgQD3mdgoW9LLZ97qup36\n2Zhp2AE3qH5AY8rQO3UqkiS6Ba+pJJlKnILci4kpdVH5DeThYh93cWm/EC1g8hnl\nEccBB8A3jjdaRdO7kFIyHwKAtcDnObjplxSDXetYvMnR+na/Pp17DomniIzWyfJY\nTDG43w6GIZQlEW22NVjUAQkC/wKBgQC36ZKfvquSHtLJo+lAke0pGUEm8mlthwEp\nANjVqG6eZEv7wfKA0zDu+AmPND72xmdZsYiCniOqWea1etTLZAx5JGj5HNz9MQ5q\nDK0XDquzL8NPvMGS/CkTQei2tYbSH1HTsbT9M/xaR9xTUtioLE2OeAyeAWKnnAJ3\nyE0lj3YunwKBgEmTwwNDPiHJzRltuVJ45OzXDo2OmW3i+brlYEz1Psq0s92Mjaz5\nU33cTTcvsNtUwKYlNXqWDjmDwihj6UQEA2IP/pPDxDkkNOYw3ewdAO5klF1h7swj\nZCohd7VX7JVkW3M7VSrjSA6r6kZNnqGUitYIGtXLFq3pPvP9aFcfs6DbAoGAKiZS\nAGKGl9qQnL4AO1g2bnDnSbHND9kdHvSevXj4wTxjXbO5jGTalioqprNmqtAV56yU\niLsNmYE5KuaX1nV7llgN5uoCi9SuZQe6s8oc99g+fwvXoYRBNbSpTRaVa5rZ+haE\nUHOVpmtJx575ILHmpHxHB/9xSNCskB9L7wvOHikCgYEAk1ExGzBfyq0YXm9WkEgo\n1TUb4q3+B6W7QWHbexGlVuKZlnfd+eiwMcHI9AXu5UC0MsKA3t8Ge2ab5gpmfEEq\ndyZ6Q5eWwiD5bZTswkjckapNLJCpX2hSnvJLg3kxe64megn4u3rqIWNyleTOCq4C\n3CUrcUeYJPDGSNZ6PqclE8I=\n-----END PRIVATE KEY-----\n",
+  "client_email": "hetro-app-django@hetro-web.iam.gserviceaccount.com",
+  "client_id": "101970833829520498262",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hetro-app-django%40hetro-web.iam.gserviceaccount.com"
+}

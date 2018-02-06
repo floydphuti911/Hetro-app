@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
     'Hetro_app',
     'tastypie',
 ]
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Hetro_web.urls'
@@ -126,6 +128,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+
 STATIC_URL = '/static/'
 
 STATIC_ROOT = 'static'
@@ -136,5 +140,17 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
+
+
+
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+
+GS_BUCKET_NAME = 'hetro-web-prod'
+
+GS_AUTO_CREATE_BUCKET = True
+
+GS_AUTO_CREATE_ACL = 'public-read'
+
+GS_PROJECT_ID = 'hetro-web'
 
 TASTYPIE_ALLOW_MISSING_SLASH = True
