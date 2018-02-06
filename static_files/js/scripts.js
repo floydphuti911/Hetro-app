@@ -160,3 +160,23 @@
 	    });
 	});
 	
+/*  var mediaElements = document.querySelectorAll('video, audio');
+
+  for (var i = 0, total = mediaElements.length; i < total; i++) {
+    new MediaElementPlayer(mediaElements[i], {
+      features: ['prevtrack', 'playpause', 'nexttrack', 'current', 'progress', 'duration', 'volume', 'playlist', 'shuffle', 'loop', 'fullscreen'],
+    });
+  }*/
+
+
+
+$(function(){
+  $('#audio-player').mediaelementplayer({
+    alwaysShowControls: true,
+    features: ['playpause','progress','volume','playlist','prevtrack','nexttrack', 'shuffle', 'loop'],
+    audioVolume: 'horizontal',
+    iPadUseNativeControls: true,
+    iPhoneUseNativeControls: true,
+    AndroidUseNativeControls: true
+  });
+});

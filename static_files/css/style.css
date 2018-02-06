@@ -3519,9 +3519,9 @@ text-decoration:none;
 	.footer {
 		padding:2em 3em 5em 5em;
 	}
-	.mejs-controls .mejs-play button, .mejs-controls .mejs-pause button {
+/*	.mejs-controls .mejs-play button, .mejs-controls .mejs-pause button {
 		left: 57px;
-	}
+	}*/
 	.content-grid:hover .inner-info {
 		padding: 3px 10px;
 		    width: 148px;
@@ -3545,10 +3545,10 @@ text-decoration:none;
 	}
 }
 @media (max-width:736px){
-	.mejs-controls .mejs-time-rail .mejs-time-total, div#mep_0 {
+/*	.mejs-controls .mejs-time-rail .mejs-time-total, div#mep_0 {
 		width: 136px !important;
 		left: 109px!important;
-	}
+	}*/
 	.login-pop {
 			width: 36%;
 			margin-top: 0.9em;
@@ -3604,9 +3604,9 @@ text-decoration:none;
 		position: absolute;
 		top: -22px;
 	}
-	.mejs-controls .mejs-play button, .mejs-controls .mejs-pause button {
+/*	.mejs-controls .mejs-play button, .mejs-controls .mejs-pause button {
 		left: 37px;
-	}
+	}*/
 	a.trend {
 		top: -116%;
 		padding: 8px 13px;
