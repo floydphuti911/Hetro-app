@@ -130,7 +130,15 @@ USE_TZ = True
 
 STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 
+GS_BUCKET_NAME = 'hetro-web-prod'
+
+GS_AUTO_CREATE_BUCKET = True
+
+GS_AUTO_CREATE_ACL = 'public-read'
+
+GS_PROJECT_ID = 'hetro-web'
 
 
 STATICFILES_DIRS = [
@@ -142,7 +150,7 @@ MEDIA_ROOT = 'media'
 STATIC_ROOT = 'static'
 
 GCS_ROOT = "https://storage.googleapis.com/{bucket_name}/".format(
-    bucket_name=os.environ.get("GCS_BUCKET", GS_BUCKET_NAME)
+    bucket_name=os.environ.get("GS_BUCKET_NAME", GS_BUCKET_NAME)
 )
 
 MEDIA_PREFIX = "media"
@@ -160,16 +168,5 @@ STATIC_URL = "{gcs_root}{prefix}/".format(
 )
 
 
-
-
-DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-
-GS_BUCKET_NAME = 'hetro-web-prod'
-
-GS_AUTO_CREATE_BUCKET = True
-
-GS_AUTO_CREATE_ACL = 'public-read'
-
-GS_PROJECT_ID = 'hetro-web'
 
 TASTYPIE_ALLOW_MISSING_SLASH = True
