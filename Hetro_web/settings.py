@@ -130,16 +130,35 @@ USE_TZ = True
 
 STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 
-STATIC_URL = '/static/'
 
-STATIC_ROOT = 'static'
+
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static_files"),
 ]
 
 MEDIA_ROOT = 'media'
-MEDIA_URL = '/media/'
+
+STATIC_ROOT = 'static'
+
+GCS_ROOT = "https://storage.googleapis.com/{bucket_name}/".format(
+    bucket_name=os.environ.get("GCS_BUCKET", GS_BUCKET_NAME)
+)
+
+MEDIA_PREFIX = "media"
+
+STATIC_PREFIX = "static"
+
+MEDIA_URL = "{gcs_root}{prefix}/".format(
+    gcs_root=GCS_ROOT,
+    prefix=MEDIA_PREFIX,
+)
+
+STATIC_URL = "{gcs_root}{prefix}/".format(
+    gcs_root=GCS_ROOT,
+    prefix=STATIC_PREFIX,
+)
+
 
 
 
