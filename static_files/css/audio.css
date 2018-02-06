@@ -23,7 +23,7 @@ div.audio-player {
     height: 17px;
     top: 25px;
     left: 10px;
-	background:  url('/static/images/play.png') -2px -4px no-repeat;
+	background:  url('/hetro-web-prod/images/play.png') -2px -4px no-repeat;
 	z-index: 1;
 }
 .mejs-controls .mejs-pause button { 
@@ -35,7 +35,7 @@ div.audio-player {
   height: 16px;
       top: 25px;
     right: 143px;
-  background: transparent url('/static/images/so.png') no-repeat 0px 0px;
+  background: transparent url('/hetro-web-prod/images/so.png') no-repeat 0px 0px;
 }
 
 /* volume scrubber bar */
@@ -94,7 +94,7 @@ div.audio-player {
       width: 23px !important;
     height: 24px;
   top: -6px;
-  background: url('/static/images/dot.png') no-repeat;
+  background: url('/hetro-web-prod/images/dot.png') no-repeat;
 }
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle {
   position: absolute;
@@ -102,7 +102,7 @@ div.audio-player {
   width: 12px  !important;
   height: 14px  !important;
   top: -2px;
-  background: url('/static/images/dot1.png') no-repeat 0px 0px;
+  background: url('/hetro-web-prod/images/dot1.png') no-repeat 0px 0px;
 }
 /* time progress tooltip */
 .mejs-controls .mejs-time-rail .mejs-time-float {
@@ -113,7 +113,7 @@ div.audio-player {
   top: -26px;
   margin-left: 0;
   z-index: 9999;
-  background: url('/static/images/time-box.png');
+  background: url('/hetro-web-prod/images/time-box.png');
 }
 .mejs-controls .mejs-time-rail .mejs-time-float-current {
   width: 33px !important;
