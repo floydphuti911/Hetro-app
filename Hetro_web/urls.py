@@ -34,5 +34,6 @@ urlpatterns = [
 url(r'^admin/', admin.site.urls),
 url(r'^artist/(?P<slug>.*)$', ArtistView.as_view(), name="artist"),
 url(r'^api/', include(v1_api.urls)),
+url(r'^static/(?P<path>.*)$', static.serve, {'document_root': settings.STATIC_ROOT}),
 url(r'^$', HomeView.as_view(), name="homepage"),
 ]

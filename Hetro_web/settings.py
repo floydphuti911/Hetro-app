@@ -128,19 +128,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-
-DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-
-GS_BUCKET_NAME = 'hetro-web-prod'
-
-GS_AUTO_CREATE_BUCKET = True
-
-GS_AUTO_CREATE_ACL = 'public-read'
-
-GS_PROJECT_ID = 'hetro-web'
-
-
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static_files"),
 ]
@@ -149,23 +136,42 @@ MEDIA_ROOT = 'media'
 
 STATIC_ROOT = 'static'
 
-GCS_ROOT = "https://storage.googleapis.com/{bucket_name}/".format(
-    bucket_name=os.environ.get("GS_BUCKET_NAME", GS_BUCKET_NAME)
-)
+STATIC_URL = '/static/'
 
-MEDIA_PREFIX = "media"
+MEDIA_URL = '/media/'
+if DJANGO_ENV == "PRODUCTION":
 
-STATIC_PREFIX = "static"
+    STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 
-MEDIA_URL = "{gcs_root}{prefix}/".format(
-    gcs_root=GCS_ROOT,
-    prefix=MEDIA_PREFIX,
-)
+    DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 
-STATIC_URL = "{gcs_root}{prefix}/".format(
-    gcs_root=GCS_ROOT,
-    prefix=STATIC_PREFIX,
-)
+    GCS_ROOT = "https://storage.googleapis.com/{bucket_name}/".format(
+        bucket_name=os.environ.get("GS_BUCKET_NAME", GS_BUCKET_NAME)
+    )
+
+    MEDIA_PREFIX = "media"
+
+    STATIC_PREFIX = "static"
+
+    MEDIA_URL = "{gcs_root}{prefix}/".format(
+        gcs_root=GCS_ROOT,
+        prefix=MEDIA_PREFIX,
+    )
+
+    STATIC_URL = "{gcs_root}{prefix}/".format(
+        gcs_root=GCS_ROOT,
+        prefix=STATIC_PREFIX,
+    )
+
+    GS_BUCKET_NAME = 'hetro-web-prod'
+
+    GS_AUTO_CREATE_BUCKET = True
+
+    GS_AUTO_CREATE_ACL = 'public-read'
+
+    GS_PROJECT_ID = 'hetro-web'
+
+
 
 
 
