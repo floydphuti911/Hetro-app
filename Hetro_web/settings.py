@@ -145,6 +145,14 @@ if DJANGO_ENV == "PRODUCTION":
 
     DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 
+    GS_BUCKET_NAME = 'hetro-web-prod'
+
+    GS_AUTO_CREATE_BUCKET = True
+
+    GS_AUTO_CREATE_ACL = 'public-read'
+
+    GS_PROJECT_ID = 'hetro-web'
+
     GCS_ROOT = "https://storage.googleapis.com/{bucket_name}/".format(
         bucket_name=os.environ.get("GS_BUCKET_NAME", GS_BUCKET_NAME)
     )
@@ -162,15 +170,6 @@ if DJANGO_ENV == "PRODUCTION":
         gcs_root=GCS_ROOT,
         prefix=STATIC_PREFIX,
     )
-
-    GS_BUCKET_NAME = 'hetro-web-prod'
-
-    GS_AUTO_CREATE_BUCKET = True
-
-    GS_AUTO_CREATE_ACL = 'public-read'
-
-    GS_PROJECT_ID = 'hetro-web'
-
 
 
 
