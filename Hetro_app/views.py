@@ -8,7 +8,12 @@ class HomeView(View):
 	def get(self,request, *args, **kwargs):
 		context = {}
 		artists = Artist.objects.filter()
-		paginator = Paginator(artists, 3) # Show 25 contacts per page
+		new_releases = Album.objects.filter(published=True).order_by('release_date')
+		context['new_releases'] = new_releases[:10]
+
+		context['trending_albums'] = Album.objects.filter(published=True,trending=True).order_by('release_date')[:4]
+
+		paginator = Paginator(artists, 9) # Show 25 contacts per page
 		page = request.GET.get('page')
 		try:
 			artists = paginator.page(page)
@@ -20,6 +25,8 @@ class HomeView(View):
 			artists = paginator.page(paginator.num_pages)
 
 		context['artists'] = artists
+
+
 		return render(request,'home.html', context) 
 
 
@@ -57,3 +64,9 @@ class ArtistView(View):
 		context['songs'] = songs
 
 		return render(request,'artist.html',context) 
+
+class AlbumView(View):
+	def get(self,request, *args, **kwargs):
+		album = get_object_or_404(Album,slug=kwargs.get('slug'))
+		context = {'album': album}
+		return render(request,'album.html',context) 
