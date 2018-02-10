@@ -9,8 +9,6 @@ from django.utils.text import slugify
 class Profile(models.Model):
 	"""docstring for Profile"""
 	user = models.OneToOneField(User, related_name='user_profile')
-	artist = models.BooleanField(default=False)
-	procuder = models.BooleanField(default=False)
 	
 	def __unicode__(self):
 		return self.user.username
@@ -25,6 +23,7 @@ class Artist(models.Model):
 	avatar = models.ImageField(null=True,blank=True,upload_to='artist_avatars')
 	albums = models.ManyToManyField('Album',blank=True, related_name='artist_album')
 	songs = models.ManyToManyField('Song',blank=True, related_name='artist_songs')
+	genre = models.CharField(max_length=100, blank=True, default="Various")
 	slug = models.CharField(max_length=100, blank=True)
 
 	def __unicode__(self):
@@ -48,11 +47,12 @@ class Artist(models.Model):
 		
 class Album(models.Model):
 	name = models.CharField(default='album_name',max_length=50)
-	art = models.ImageField(null=True,blank=True,upload_to='album_art')
+	art = models.ImageField(null=True,blank=True,upload_to='album_art', default='album_art/default-album.png')
 	songs = models.ManyToManyField('Song',blank=True, related_name='album_songs')
 	published = models.BooleanField(default=False)
-	Realease_date = models.DateTimeField()
+	release_date = models.DateTimeField()
 	slug = models.CharField(max_length=100, blank=True)
+	trending = models.BooleanField(default=False)
 
 	def __unicode__(self):
 		return self.name

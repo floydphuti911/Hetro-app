@@ -619,7 +619,7 @@ ul.nav li a span {
 }
 
 .sticky-header .main-content {
-    padding-top: 50px;
+    padding-top: 0px;
 }
 .sticky-header .menu-right {
     margin-right: 0;
@@ -1266,7 +1266,8 @@ a.top-sign {
   padding: 4em 0 0 0;
 }
 .content-grid img {
-    width: 100%;
+    width: 100px;
+    height: 100px;
 }
 .content-grid {
     width:25%;
@@ -2998,7 +2999,6 @@ text-decoration:none;
 @media (max-width:1366px){
   .content-grid {
     width: 23.5%;
-    margin-right: 2%;
   }
   .content-grid.last-grid {
     margin-right:0%;

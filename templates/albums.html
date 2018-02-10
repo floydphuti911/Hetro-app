@@ -11,10 +11,10 @@
 									<a href="index.html"><h4 class="tittle">See all</h4></a>
 									<div class="clearfix"> </div>
 								</div>
-								{% for artist in artists %}
+								{% for album in new_releases %}
 								<div class="col-md-3 content-grid">
-									<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="{{ artist.avatar.url }}" title="allbum-name"></a>
-									<a class="button " href="{% url 'artist' artist.slug %}">Listen now</a>
+									<a class="play-icon popup-with-zoom-anim" href="{% url 'album' album.slug %}"><img src="{{ album.art.url }}" title="allbum-name"></a>
+									<a class="button " href="{% url 'album' album.slug %}">Listen now</a>
 								</div>
 								{% endfor %}
 
@@ -29,38 +29,12 @@
 											<a href="index.html"><h4 class="tittle two">See all</h4></a>
 											<div class="clearfix"> </div>
 										</div>
+											{% for artist in artists %}
 											<div class="col-md-3 content-grid">
-												<a href="single.html"><img src="{% static '/images/v11.jpg' %}" title="allbum-name"></a>
-												<div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
+												<a href="{% url 'artist' artist.slug %}"><img src="{{ artist.avatar.url }}" title="allbum-name"></a>
+												<div class="inner-info"><a href="{% url 'artist' artist.slug %}"><h5>{{ artist.genre}}</h5></a></div>
 											</div>
-											<div class="col-md-3 content-grid">
-													<a href="single.html"><img src="{% static '/images/v22.jpg' %}" title="allbum-name"></a>
-													<div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-												</div>
-											<div class="col-md-3 content-grid">
-													<a href="single.html"><img src="{% static '/images/v33.jpg' %}" title="allbum-name"></a>
-													<div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-												</div>
-											<div class="col-md-3 content-grid last-grid">
-													<a href="single.html"><img src="{% static '/images/v44.jpg' %}" title="allbum-name"></a>
-													<div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-											</div>
-											<div class="col-md-3 content-grid">
-													<a href="single.html"><img src="{% static '/images/v55.jpg' %}" title="allbum-name"></a>
-													<div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-											</div>
-											<div class="col-md-3 content-grid">
-												<a href="single.html"><img src="{% static '/images/v66.jpg' %}" title="allbum-name"></a>
-												<div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-											</div>
-											<div class="col-md-3 content-grid">
-													<a href="single.html"><img src="{% static '/images/v11.jpg' %}" title="allbum-name"></a>
-													<div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-											</div>
-											<div class="col-md-3 content-grid last-grid">
-													<a href="single.html"><img src="{% static '/images/v22.jpg' %}" title="allbum-name"></a>
-													<div class="inner-info"><a href="single.html"><h5>Pop</h5></a></div>
-											</div>
+											{% endfor %}
 											<div class="clearfix"> </div>
 									</div>
 								<!--//discover-view-->

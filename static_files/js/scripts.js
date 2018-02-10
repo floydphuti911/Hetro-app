@@ -66,7 +66,7 @@
 
 
    // Menu Toggle
-   jQuery('.toggle-btn').click(function(){
+   jQuery('.menu-toggle').click(function(){
        $(".left-side").getNiceScroll().hide();
        
        if ($('body').hasClass('left-side-collapsed')) {
@@ -170,7 +170,7 @@
 
 
 
-$(function(){
+/*$(function(){
   $('#audio-player').mediaelementplayer({
     alwaysShowControls: true,
     features: ['prevtrack', 'playpause', 'nexttrack', 'progress',  'volume', 'playlist'],
@@ -179,4 +179,4 @@ $(function(){
     iPhoneUseNativeControls: true,
     AndroidUseNativeControls: true
   });
-});
+});*/
