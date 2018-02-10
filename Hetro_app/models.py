@@ -83,7 +83,7 @@ class Song(models.Model):
 	slug = models.CharField(max_length=100, blank=True)
 
 	def __unicode__(self):
-		return self.title
+		return self.title if self.title else str(self.id)
 
 	def get_unique_slug(self):
 		slug = slugify(self.title)
