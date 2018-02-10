@@ -173,7 +173,7 @@
 $(function(){
   $('#audio-player').mediaelementplayer({
     alwaysShowControls: true,
-    features: ['prevtrack', 'playpause', 'nexttrack', 'current', 'progress', 'duration', 'volume', 'playlist'],
+    features: ['prevtrack', 'playpause', 'nexttrack', 'progress',  'volume', 'playlist'],
     audioVolume: 'horizontal',
     iPadUseNativeControls: true,
     iPhoneUseNativeControls: true,
