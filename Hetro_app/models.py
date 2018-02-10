@@ -75,7 +75,7 @@ class Album(models.Model):
 
 			
 class Song(models.Model):
-	title = models.CharField(max_length=50)
+	title = models.CharField(null=True,blank=True,max_length=50)
 	track = models.FileField(null=True,blank=True,upload_to='tracks')
 	genre = models.CharField(default="Various",blank=True,max_length=50)
 	Realease_date = models.DateTimeField()
