@@ -89,7 +89,8 @@ DATABASES = {
 if DJANGO_ENV == "PRODUCTION":
     import dj_database_url
     DATABASES = {'default': dj_database_url.config()}
-
+    DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+    DATABASES['default']['NAME'] = 'development'
 
 
 # Password validation
