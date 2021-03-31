@@ -49,7 +49,7 @@ ipaddress==1.0.18
 jmespath==0.9.3
 kombu==3.0.37
 Logentries==0.17
-lxml==3.8.0
+lxml==4.6.3
 oauth2client==4.1.2
 olefile==0.44
 packaging==16.8
